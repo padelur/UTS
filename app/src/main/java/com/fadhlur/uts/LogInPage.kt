@@ -2,34 +2,35 @@ package com.fadhlur.uts
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
-import android.view.WindowManager
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
-class MainActivity : AppCompatActivity() {
+class LogInPage : AppCompatActivity() {
+    private lateinit var btnLogin2 : Button
+    private lateinit var txtSignUp: TextView
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        //ini  sebagai splash screen
-        setContentView(R.layout.activity_main)
-        window.setFlags(
-            WindowManager.LayoutParams.FLAG_FULLSCREEN,
-            WindowManager.LayoutParams.FLAG_FULLSCREEN)
-
-        //handle untuk delay beberapa detik
-        Handler(Looper.getMainLooper()).postDelayed({
-            val intent = Intent(this, StartScreen::class.java)
-            startActivity(intent)
-            finish()//agar ketika dia pindah ke page 2,itu gak back ke splashscreen
-        },3000)
+        setContentView(R.layout.activity_log_in_page)
+        btnLogin2 = findViewById(R.id.btnLogin2)
+        txtSignUp = findViewById(R.id.txtLogin)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
+        }
+        txtSignUp.setOnClickListener() {
+            val intentPassingData = Intent(this, SignUpPage::class.java)
+            startActivity(intentPassingData)
+        }
+
+        btnLogin2.setOnClickListener() {
+            val intentPassingData = Intent(this, ListMakanan::class.java)
+            startActivity(intentPassingData)
         }
     }
 }

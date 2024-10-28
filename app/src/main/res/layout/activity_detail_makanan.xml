@@ -5,19 +5,30 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F4CA58"
-    tools:context=".MainActivity">
+    tools:context=".detailmovie">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <ImageView
-            android:id="@+id/imageView"
+        <TextView
+            android:id="@+id/txtDetailNamaMakanan"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="200sp"
-            app:srcCompat="@drawable/img6" />
+            android:layout_marginTop="20sp"
+            android:background="#F4CA58"
+            android:text="Nama Makanan "
+            android:textAlignment="center"
+            android:textColor="#121212"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/imgDetailMakanan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/img1" />
+
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

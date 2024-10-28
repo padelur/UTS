@@ -13,10 +13,16 @@
         android:theme="@style/Theme.UTS"
         tools:targetApi="31">
         <activity
-            android:name=".PageSignin"
+            android:name=".detailMakanan"
             android:exported="false" />
         <activity
-            android:name=".PageLogin"
+            android:name=".ListMakanan"
+            android:exported="false" />
+        <activity
+            android:name=".LogInPage"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpPage"
             android:exported="false" />
         <activity
             android:name=".StartScreen"

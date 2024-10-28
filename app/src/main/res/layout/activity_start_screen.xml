@@ -5,50 +5,47 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FE642F"
     tools:context=".StartScreen">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#E95322"
-        android:backgroundTint="#E95322"
         android:orientation="vertical">
 
         <ImageView
             android:id="@+id/imageView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="250sp"
-            app:srcCompat="@drawable/logo2" />
+            android:layout_marginTop="100sp"
+            app:srcCompat="@drawable/img4" />
 
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30sp"
-            android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod."
+            android:layout_marginTop="10sp"
+            android:text="Yum Quicks Inc., adalah perusahaan restoran yang memiliki jaringan restoran cepat saji."
             android:textAlignment="center"
-            android:textColor="#FFFFFF" />
+            android:textSize="16sp" />
 
         <Button
-            android:id="@+id/btnLogin"
-            android:layout_width="150dp"
+            android:id="@+id/btnLogIn"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30sp"
-            android:backgroundTint="#F5CB58"
+            android:layout_marginTop="50sp"
+            android:backgroundTint="#F4CA58"
             android:text="Log In"
-            android:textColor="#E95322" />
+            android:textColor="#FE642F" />
 
         <Button
-            android:id="@+id/btnSignin"
-            android:layout_width="150dp"
+            android:id="@+id/btnSignUp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="0sp"
-            android:backgroundTint="#F3E9B5"
-            android:text="Sign In"
-            android:textColor="#E95322" />
-
+            android:backgroundTint="#F3E9B5 "
+            android:text="Sign Up"
+            android:textColor="#FE642F" />
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
